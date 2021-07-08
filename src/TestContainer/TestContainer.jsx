@@ -1,5 +1,6 @@
 import React from 'react'
 import TryAgain from '../TryAgain/TryAgain';
+import TypingChallenge from '../TyoingChallenge/TypingChallenge';
 import './TestContainer.css';
 
 const TestContainer = ({
@@ -9,9 +10,12 @@ const TestContainer = ({
 }) => {
     return (
         <div className="test-container">
-            <div className="try-again-container">
-                <TryAgain words={words} characters={characters} wpm={wpm} />
+            <div  data-aos="fade-up" className="typing-challenge-cont">
+                <TypingChallenge words={words} characters={characters} wpm={wpm} />
             </div>
+            {/*<div className="try-again-container">
+                <TryAgain words={words} characters={characters} wpm={wpm} />
+            </div>*/}
         </div>
     )
 }
