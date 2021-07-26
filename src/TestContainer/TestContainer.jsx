@@ -3,7 +3,7 @@ import TryAgain from '../TryAgain/TryAgain';
 import TypingChallenge from '../TyoingChallenge/TypingChallenge';
 import './TestContainer.css';
 
-const TestContainer = ({timeRemaining,selectedParagraph,words,characters,wpm,timerStarted}) => {
+const TestContainer = ({timeRemaining,selectedParagraph,words,characters,wpm,timerStarted,testInfo}) => {
 
     
 
@@ -12,7 +12,11 @@ const TestContainer = ({timeRemaining,selectedParagraph,words,characters,wpm,tim
             {
                 timeRemaining >0 ?(
                     <div  data-aos="fade-up" className="typing-challenge-cont">
-                <TypingChallenge timeRemaining={timeRemaining} selectedParagraph={selectedParagraph} timerStarted={timerStarted} words={words} characters={characters} wpm={wpm} />
+                <TypingChallenge timeRemaining={timeRemaining} 
+                selectedParagraph={selectedParagraph} 
+                timerStarted={timerStarted} words={words} 
+                characters={characters} wpm={wpm} 
+                testInfo={testInfo}/>
             </div>
                 ):
                 (

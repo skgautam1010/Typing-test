@@ -3,7 +3,7 @@ import ChallengeDetailCard from '../ChallengeDetailCard/ChallengeDetailCard';
 import './TypingChallenge.css';
 import RealChallenge from '../RealChallenge/RealChallenge';
 
-const TypingChallenge = ({selectedParagraph,words,characters,wpm,timeRemaining,timerStarted}) => {
+const TypingChallenge = ({selectedParagraph,words,characters,wpm,timeRemaining,timerStarted,testInfo}) => {
     return (
         <div className="typing-challenge-container">
             <div className="details-container">
@@ -12,7 +12,9 @@ const TypingChallenge = ({selectedParagraph,words,characters,wpm,timeRemaining,t
                     <ChallengeDetailCard cardName="Speed" cardValue={wpm}/>
             </div>
             <div className="typewriter-container">
-                <RealChallenge selectedParagraph={selectedParagraph} timeRemaining={timeRemaining} timerStarted={timerStarted}/>                
+                <RealChallenge selectedParagraph={selectedParagraph} timeRemaining={timeRemaining} 
+                timerStarted={timerStarted}
+                testInfo={testInfo}/>                
             </div>
         </div>
     )
