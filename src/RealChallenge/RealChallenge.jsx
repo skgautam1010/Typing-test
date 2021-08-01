@@ -1,7 +1,7 @@
 import React from 'react'
 import TestLetter from '../TestLetter/TestLetter';
 import './RealChallenge.css';
-const RealChallenge = ({selectedParagraph,timeRemaining,timerStarted,testInfo}) => {
+const RealChallenge = ({timeRemaining,timerStarted,testInfo,onInputChange}) => {
     return (
         <div className="typing-challenge">
             <div className="timer-container">
@@ -16,9 +16,9 @@ const RealChallenge = ({selectedParagraph,timeRemaining,timerStarted,testInfo}) 
             <div className="text-area-container">
                 <div className="textarea-left">
                     <div className="textarea text-paragraph">
-                        {testInfo.map((individualLetterInfo)=>{
+                        {testInfo.map((individualLetterInfo,index)=>{
                                 return(
-                                    <TestLetter individualLetterInfo={individualLetterInfo} />);
+                                    <TestLetter key={index} individualLetterInfo={individualLetterInfo} />);
                                 
                         })}
                     </div>
@@ -27,6 +27,7 @@ const RealChallenge = ({selectedParagraph,timeRemaining,timerStarted,testInfo}) 
                     <textarea
                     className="textarea"
                     placeholder="Start typing here"
+                    onChange={(e) => onInputChange(e.target.value)}
                     ></textarea>
                 </div>
             </div>
