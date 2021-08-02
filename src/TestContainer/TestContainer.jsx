@@ -3,7 +3,7 @@ import TryAgain from '../TryAgain/TryAgain';
 import TypingChallenge from '../TyoingChallenge/TypingChallenge';
 import './TestContainer.css';
 
-const TestContainer = ({timeRemaining,selectedParagraph,words,characters,wpm,timerStarted,testInfo,onInputChange}) => {
+const TestContainer = ({timeRemaining,selectedParagraph,words,characters,wpm,timerStarted,testInfo,onInputChange,startAgain}) => {
 
     
 
@@ -22,7 +22,8 @@ const TestContainer = ({timeRemaining,selectedParagraph,words,characters,wpm,tim
                 ):
                 (
                     <div className="try-again-container">
-                <TryAgain words={words} characters={characters} wpm={wpm} />
+                <TryAgain words={words} characters={characters} wpm={wpm}
+                startAgain={startAgain} />
             </div>
                 )
             }

@@ -3,11 +3,11 @@ import './Footer.css';
 const Footer = () => {
     return (
         <div className="footer-container">
-            <a href="https://www.linkedin.com/in/sonukumargautam"
+            <a href="https://github.com/skgautam1010/Typing-test"
                 className="footer-link"
                 target="_blank"
                 rel="noreferrer"
-            >Linkedin</a>
+            >Source Code</a>
         </div>
     )
 }
